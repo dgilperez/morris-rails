@@ -546,7 +546,9 @@
       this.drawGrid();
       this.drawSeries();
       this.drawHover();
-      return this.hilight(this.options.hideHover ? null : 0);
+      var result = this.hilight(this.options.hideHover ? null : 0);
+      this.el.trigger('morris:redraw:complete');
+      return result;
     };
 
     Line.prototype.drawGrid = function() {
