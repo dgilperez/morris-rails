@@ -489,7 +489,7 @@
         this.elementWidth = w;
         this.elementHeight = h;
         this.dirty = false;
-        this.maxYLabelWidth = Math.max(this.measureText(this.yLabelFormat(this.ymin), this.options.gridTextSize).width, this.measureText(this.yLabelFormat(this.ymax), this.options.gridTextSize).width);
+        this.maxYLabelWidth = Math.max(this.measureText(this.yAxisFormat(this.ymin), this.options.gridTextSize).width, this.measureText(this.yAxisFormat(this.ymax), this.options.gridTextSize).width);
         this.left = this.maxYLabelWidth + this.options.marginLeft;
         this.width = this.el.width() - this.left - this.options.marginRight;
         this.height = this.el.height() - this.options.marginTop - this.options.marginBottom;
@@ -559,7 +559,7 @@
       for (lineY = _i = firstY, _ref = this.yInterval; firstY <= lastY ? _i <= lastY : _i >= lastY; lineY = _i += _ref) {
         v = parseFloat(lineY.toFixed(this.precision));
         y = this.transY(v);
-        this.r.text(this.left - this.options.marginLeft / 2, y, this.yLabelFormat(v)).attr('font-size', this.options.gridTextSize).attr('fill', this.options.gridTextColor).attr('text-anchor', 'end');
+        this.r.text(this.left - this.options.marginLeft / 2, y, this.yAxisFormat(v)).attr('font-size', this.options.gridTextSize).attr('fill', this.options.gridTextColor).attr('text-anchor', 'end');
         this.r.path("M" + this.left + "," + y + "H" + (this.left + this.width)).attr('stroke', this.options.gridLineColor).attr('stroke-width', this.options.gridStrokeWidth);
       }
       ypos = this.options.marginTop + this.height + this.options.marginBottom / 2;
@@ -776,6 +776,14 @@
       ret = tt.getBBox();
       tt.remove();
       return ret;
+    };
+
+    Line.prototype.yAxisFormat = function(label) {
+      if (typeof this.options.yAxisFormat === 'function') {
+        return this.options.yAxisFormat(label);
+      } else {
+        return this.yLabelFormat(label);
+      }
     };
 
     Line.prototype.yLabelFormat = function(label) {
