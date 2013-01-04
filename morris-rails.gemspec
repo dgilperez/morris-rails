@@ -1,15 +1,16 @@
+# -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
 require 'morris-rails/version'
 
-Gem::Specification.new do |s|
-  s.name        = 'morris-rails'
-  s.version     = Morris::Rails::VERSION
-  s.authors     = ['James Logsdon']
-  s.homepage    = 'https://github.com/jlogsdon/morris-rails'
-  s.summary     = 'morris-rails is an assets gem for Morris.js'
+Gem::Specification.new do |gem|
+  gem.name        = 'morris-rails'
+  gem.version     = Morris::Rails::VERSION
+  gem.authors     = ['James Logsdon']
+  gem.description = "morris.js rails asset gem"
+  gem.summary     = 'morris-rails is an assets gem for Morris.js'
+  gem.homepage    = 'https://github.com/jlogsdon/morris-rails'
 
-  s.files = Dir['{lib,vendor}/**/*']
+  gem.files = Dir['{lib,vendor}/**/*'] + ["README.md"]
 
-  s.add_dependency 'railties', '~> 3.0'
+  gem.add_dependency 'railties', '~> 3.1'
 end
-
