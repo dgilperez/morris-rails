@@ -12,5 +12,5 @@ Gem::Specification.new do |gem|
 
   gem.files = Dir['{lib,vendor}/**/*'] + ["README.md"]
 
-  gem.add_dependency 'railties', '>= 3.2.0'
+  gem.add_dependency 'railties', [">= 3.1", "< 4.1"]
 end
