@@ -1,3 +1,0 @@
-[submodule "vendor/repos/morris.js"]
-	path = vendor/repos/morris.js
-	url = git://github.com/oesmith/morris.js
