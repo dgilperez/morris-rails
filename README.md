@@ -7,7 +7,7 @@ asset gem for morris.js
 
 Add this gem to your Gemfile:
 
-    gem 'morris-rails'
+    gem 'morris-rails', git: 'git://github.com/dgilperez/morris-rails.git'
 
 Add the following directive to your Javascript manifest file (application.js):
 
