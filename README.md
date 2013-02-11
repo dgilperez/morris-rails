@@ -17,7 +17,7 @@ Enjoy.
 
 ## Versioning
 
-morris-rails 0.3.3 == morris.js 0.3.3
+morris-rails 0.4.1 == morris.js 0.4.1
 
 
 ## Contributing
