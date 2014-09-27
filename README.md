@@ -1,7 +1,7 @@
 morris-rails
 ============
 
-asset gem for morris.js
+Asset pipeline wrapper for [morris.js](https://github.com/morrisjs/morris.js)
 
 ## Usage
 
@@ -17,9 +17,8 @@ Enjoy.
 
 ## Versioning
 
-morris-rails 0.4.1 == morris.js 0.4.1
-
-
+morris-rails 0.5.1 == morris.js 0.5.1
+  
 ## Contributing
 
 1. Fork it
